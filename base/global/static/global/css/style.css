@@ -1,0 +1,31 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+    background-color: brown;
+    color: rgba(35, 36, 37, .7);
+    font-family: 'Bitter', serif, 'Roboto', sans-serif;
+}
+
+.content{
+    display: grid;
+    padding: 15px;
+    gap: 15px;
+}
+
+.post{
+    background-color: #f1f1f1;
+    padding: 15px;
+    box-shadow: 5px 2px 5px rgba(0, 0, 0, .6);
+}
+
+@media screen and (min-width:600px){
+    .content{
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+}

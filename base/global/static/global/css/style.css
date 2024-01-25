@@ -24,8 +24,13 @@ body{
     box-shadow: 5px 2px 5px rgba(0, 0, 0, .6);
 }
 
+a{
+    color: #302d7c;
+    text-decoration: none;
+}
+
 @media screen and (min-width:600px){
-    .content{
+    .content:not(:has(.single_post)){
         grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     }
 }

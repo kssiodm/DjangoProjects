@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import Http404
 from blog.data import posts
 
 # Create your views here.
@@ -30,12 +31,15 @@ def post(resquest, post_id):
             found_post = post
             break
     
+    if found_post is None:
+        raise  Http404('post não encontrado!')
+    
     return render(
         resquest,
-        'blog/index.html',
+        'blog/post.html',
         {
             'title': 'post',
-            'posts': posts,
+            'posts': found_post,
         }
     )
 

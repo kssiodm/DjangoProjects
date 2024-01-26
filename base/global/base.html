@@ -6,7 +6,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=, initial-scale=1.0">
         <title>site exemplo {% block title %}{% endblock title %}</title>
-        <link rel="stylesheet" href={% static "global/css/style.css"%}>
+        <link rel="stylesheet" href={% static "global/css/brown.css"%}>
+        <link rel="stylesheet" href={%static "global/lib/bootstrap.min.css"%}>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Bitter&family=Roboto:ital@1&display=swap" rel="stylesheet">
@@ -16,9 +17,6 @@
         {% include "global/portals/menu.html" %}
         <h1>{% block texto  %}BASE{% endblock texto  %}</h1>
 
-        <div class="content">
-            {% block posts %}{% endblock posts %}
-        </div>
-
+        <script src="{%static "global/lib/bootstrap.bundle.min.js"%}"></script>
     </body>
 </html>
